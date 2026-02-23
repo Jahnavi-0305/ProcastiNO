@@ -1,0 +1,419 @@
+.app-shell {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.app-header {
+  margin-bottom: 1.4rem;
+}
+
+.brand {
+  margin: 0;
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border: 2px solid #3b2f23;
+  border-radius: 999px;
+  background: #fff2bd;
+  box-shadow: 2px 2px 0 #3b2f23;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+}
+
+.headline {
+  margin: 0.8rem 0 0;
+  font-size: clamp(1.7rem, 2.8vw, 2.35rem);
+  line-height: 1.1;
+  max-width: 24ch;
+  font-family: 'Gloria Hallelujah', 'Patrick Hand', cursive;
+}
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 330px) minmax(340px, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.left-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.coach-card {
+  padding: 1rem 0.9rem 1.2rem;
+  border: 2px solid #3b2f23;
+  border-radius: 20px;
+  background: #fffdf3;
+  box-shadow: 4px 4px 0 #3b2f23;
+}
+
+.coach-svg {
+  width: 100%;
+  height: auto;
+}
+
+.coach-line {
+  margin: 0.3rem 0 0;
+  padding: 0.45rem 0.7rem;
+  border: 2px dashed #7f6954;
+  border-radius: 12px;
+  background: #fff6d5;
+}
+
+.coach-organizing .coach-svg {
+  animation: bob 1s ease-in-out infinite alternate;
+}
+
+.mind-room {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  border: 2px solid #3b2f23;
+  border-radius: 20px;
+  background: linear-gradient(160deg, #fcf6dd, #f7ebc6);
+  box-shadow: 4px 4px 0 #3b2f23;
+}
+
+.mind-room::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 12% 20%, rgb(140 102 48 / 15%) 0 1px, transparent 1.2px);
+  background-size: 18px 18px;
+  pointer-events: none;
+}
+
+.mind-title {
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  font-size: 1.02rem;
+  border-bottom: 2px dashed #9c8568;
+}
+
+.mind-note {
+  position: absolute;
+  width: 104px;
+  padding: 0.4rem 0.5rem;
+  border: 2px solid #3b2f23;
+  border-radius: 10px;
+  background: #fff4a8;
+  box-shadow: 2px 2px 0 #3b2f23;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-transform: capitalize;
+}
+
+.note-1 {
+  top: 52px;
+  left: 8px;
+  transform: rotate(-17deg);
+}
+
+.note-2 {
+  top: 96px;
+  left: 132px;
+  transform: rotate(12deg);
+}
+
+.note-3 {
+  top: 140px;
+  left: 24px;
+  transform: rotate(-8deg);
+}
+
+.note-4 {
+  top: 62px;
+  right: 12px;
+  transform: rotate(13deg);
+}
+
+.note-5 {
+  top: 148px;
+  right: 48px;
+  transform: rotate(-12deg);
+}
+
+.mind-room-active .note-1 {
+  top: 58px;
+  left: 18px;
+  transform: rotate(-4deg);
+}
+
+.mind-room-active .note-2 {
+  top: 58px;
+  left: 132px;
+  transform: rotate(-1deg);
+}
+
+.mind-room-active .note-3 {
+  top: 112px;
+  left: 18px;
+  transform: rotate(2deg);
+}
+
+.mind-room-active .note-4 {
+  top: 112px;
+  right: 128px;
+  transform: rotate(-3deg);
+}
+
+.mind-room-active .note-5 {
+  top: 112px;
+  right: 18px;
+  transform: rotate(1deg);
+}
+
+.broom-sweep {
+  position: absolute;
+  left: -14px;
+  bottom: 20px;
+  width: 120px;
+  height: 14px;
+  border: 2px solid #3b2f23;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f2ca77, #d9aa57);
+  box-shadow: 2px 2px 0 #3b2f23;
+  opacity: 0;
+}
+
+.mind-room-active .broom-sweep {
+  opacity: 0.95;
+  animation: sweep 1.1s ease-in-out infinite alternate;
+}
+
+.board-shell {
+  position: relative;
+  aspect-ratio: 720 / 580;
+  min-height: 580px;
+}
+
+.board-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.board-content {
+  position: relative;
+  height: 100%;
+  padding: 2.2rem 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  overflow: auto;
+}
+
+.board-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-family: 'Gloria Hallelujah', 'Patrick Hand', cursive;
+}
+
+.board-copy {
+  margin: 0 0 0.2rem;
+  font-size: 1.15rem;
+}
+
+.board-label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.hand-textarea,
+.hand-input {
+  width: 100%;
+  border: 2px solid #3b2f23;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 72%);
+  box-shadow: 2px 2px 0 #3b2f23;
+  padding: 0.6rem 0.75rem;
+  font-size: 1.06rem;
+}
+
+.hand-textarea:focus,
+.hand-input:focus {
+  outline: 3px solid rgb(255 176 46 / 45%);
+  outline-offset: 2px;
+}
+
+.hand-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr;
+  gap: 0.45rem 0.65rem;
+  align-items: center;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+.hand-button {
+  border: 2px solid #3b2f23;
+  border-radius: 14px;
+  background: #ffd76e;
+  box-shadow: 3px 3px 0 #3b2f23;
+  padding: 0.55rem 0.95rem;
+  cursor: pointer;
+  font-size: 1.02rem;
+  font-weight: 700;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.hand-button:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #3b2f23;
+}
+
+.hand-button:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 #3b2f23;
+}
+
+.hand-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.hand-button-ghost {
+  background: #fff9e5;
+}
+
+.error-text {
+  margin: 0.35rem 0 0;
+  color: #8c2219;
+  font-weight: 700;
+}
+
+.status-text {
+  margin: 0.35rem 0 0;
+  padding: 0.5rem 0.8rem;
+  border: 2px dashed #7e6f5c;
+  border-radius: 12px;
+  background: #fff4cb;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+.timetable-shell {
+  margin-top: 0.35rem;
+  padding: 0.65rem 0.75rem;
+  border: 2px dashed #756351;
+  border-radius: 14px;
+  background: #fffcec;
+}
+
+.timetable-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.timetable-list {
+  margin: 0;
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timetable-item {
+  border: 2px solid #3b2f23;
+  border-radius: 12px;
+  box-shadow: 2px 2px 0 #3b2f23;
+  padding: 0.42rem 0.58rem;
+  list-style: none;
+}
+
+.timetable-task {
+  background: #fdf0be;
+}
+
+.timetable-break {
+  background: #d8f5ff;
+}
+
+.slot-time,
+.slot-task,
+.slot-duration {
+  margin: 0;
+}
+
+.slot-time {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.slot-task {
+  font-size: 1.08rem;
+}
+
+.slot-duration {
+  font-size: 0.95rem;
+  opacity: 0.84;
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(0) rotate(-6deg);
+  }
+  to {
+    transform: translateX(180px) rotate(3deg);
+  }
+}
+
+@keyframes bob {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.015);
+  }
+}
+
+@media (width <= 1000px) {
+  .stage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .board-shell {
+    min-height: 620px;
+  }
+
+  .left-stage {
+    order: 2;
+  }
+}
+
+@media (width <= 640px) {
+  .app-shell {
+    padding: 1.2rem 0.7rem 2rem;
+  }
+
+  .board-content {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .time-grid {
+    grid-template-columns: 1fr;
+  }
+}
