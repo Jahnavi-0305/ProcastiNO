@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import rough from 'roughjs/bin/svg'
+import rough from 'roughjs'
 import './App.css'
 
 const CLEANUP_STEPS = [
